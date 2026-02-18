@@ -1,0 +1,114 @@
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.status-approved {
+  background: #28a745;
+  color: white;
+}
+
+.status-rejected {
+  background: #dc3545;
+  color: white;
+}
+
+.status-pending {
+  background: #ffc107;
+  color: black;
+}
+
+/* Base card */
+.gatepass-card {
+  border-left: 6px solid #ccc;
+  padding: 16px;
+  margin-bottom: 16px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* ✅ Approved */
+.gatepass-card.approved {
+  border-left-color: green;
+}
+
+/* ❌ Rejected */
+.gatepass-card.rejected-by-coordinator,
+.gatepass-card.rejected-by-hod {
+  border-left-color: red;
+}
+
+/* ⏳ Pending */
+.gatepass-card.pending,
+.gatepass-card.pending-coordinator,
+.gatepass-card.pending-hod {
+  border-left-color: orange;
+}
+
+/* Header */
+.gatepass-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.gatepass-header h4 {
+  margin: 0;
+  color: #333;
+}
+
+/* Body */
+.gatepass-body p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+
+/* Pending text */
+.pending-text {
+  color: #ff9800;
+  font-weight: 500;
+}
+
+/* Button small */
+.action-btn.small {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 13px;
+}
+
+.gatepass-id {
+  display: inline-block;
+  margin-top: 4px;
+  padding: 3px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #0b5ed7;
+  background-color: #e7f1ff;
+  border: 1px solid #b6d4fe;
+  border-radius: 6px;
+}
+
+.priority {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.priority.high {
+  background-color: #ffdddd;
+  color: #c62828;
+}
+
+.priority.normal {
+  background-color: #fff4cc;
+  color: #8a6d00;
+}
+
+.priority.low {
+  background-color: #e6f4ea;
+  color: #2e7d32;
+}
+

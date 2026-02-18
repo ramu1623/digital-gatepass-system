@@ -1,0 +1,89 @@
+.hod-dashboard {
+  padding: 20px;
+}
+
+.hod-dashboard h2 {
+  margin-bottom: 15px;
+}
+
+.hod-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.hod-info h3 {
+  margin: 0;
+  color: #333;
+}
+
+.hod-info .user-details {
+  text-align: right;
+}
+
+.hod-info .user-details p {
+  margin: 2px 0;
+  color: #666;
+  font-size: 0.9em;
+}
+
+.hod-dashboard .request-card {
+  background: #fff;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+}
+
+/* HOD container */
+.hod-dashboard {
+  padding: 25px;
+  max-width: 900px;
+  margin: auto;
+  position: relative;
+}
+
+/* Navigation & Headers */
+.dashboard-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.dashboard-actions h3 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #2c3e50;
+  border-left: 5px solid #1976d2;
+  padding-left: 12px;
+  margin: 0;
+}
+
+/* Action buttons */
+.action-group {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Approve / Reject */
+.action-btn.approve {
+  background-color: #4caf50;
+}
+
+.action-btn.approve:hover {
+  background-color: #388e3c;
+}
+
+.action-btn.reject {
+  background-color: #f44336;
+}
+
+.action-btn.reject:hover {
+  background-color: #c62828;
+}

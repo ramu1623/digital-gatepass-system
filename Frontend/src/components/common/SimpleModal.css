@@ -1,0 +1,125 @@
+.simple-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Overlay matching the body background color #f5f7fa with transparency */
+  background-color: rgba(245, 247, 250, 0.85);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.simple-modal-container {
+  background-color: #ffffff;
+  width: 90%;
+  max-width: 420px;
+  /* Matching project border radius */
+  border-radius: 8px; 
+  /* Simple shadow */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e1e4e8;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.simple-modal-header {
+  padding: 16px 20px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.simple-modal-header h3 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.simple-close-btn {
+  background: none;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  color: #adb5bd;
+  transition: color 0.2s;
+  padding: 0;
+  line-height: 1;
+}
+
+.simple-close-btn:hover {
+  color: #495057;
+}
+
+.simple-modal-body {
+  padding: 20px;
+  color: #495057;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.simple-modal-input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-top: 15px;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  resize: vertical;
+  box-sizing: border-box;
+  transition: all 0.2s;
+}
+
+.simple-modal-input:focus {
+  outline: none;
+  border-color: #0b5ed7; /* Project Primary Blue */
+  box-shadow: 0 0 0 3px rgba(11, 94, 215, 0.15);
+}
+
+.simple-modal-footer {
+  padding: 16px 20px;
+  background-color: #f8f9fa;
+  border-top: 1px solid #f0f0f0;
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.simple-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s;
+}
+
+.simple-btn.primary {
+  background-color: #0b5ed7; /* Project Primary Blue */
+  color: white;
+}
+
+.simple-btn.primary:hover {
+  background-color: #0a58ca;
+  transform: translateY(-1px);
+}
+
+.simple-btn.secondary {
+  background-color: #e9ecef;
+  color: #495057;
+}
+
+.simple-btn.secondary:hover {
+  background-color: #dee2e6;
+  color: #212529;
+}
