@@ -29,7 +29,7 @@ const sendSMS = async (from, to, message) => {
     console.log("----- SMS MOCK -----");
     console.log("From:", from);
     console.log("To:", to);
-    console.log("Message:", message);
+    console.log(message);
     console.log("--------------------");
   }
 };

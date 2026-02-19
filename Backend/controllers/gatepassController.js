@@ -78,14 +78,7 @@ exports.sendSMSAfterApproval = async (gatePassId) => {
       }
 
       console.log("Parent Mobile:", student.parentMobile);
-      console.log("Parent Mobile:", student.parentMobile);
-
-      const message = `Dear Parent Getpass approved to your child ✅
-Student: ${student.name}
-Roll No: ${student.rollNo}
-Out Time: ${gatePass.outTime}
-Expected In Time: ${gatePass.expectedInTime || "N/A"}
-- College Gate Pass System`;
+      const message = `Dear Parent Getpass approved to your child ${student.name} having Roll No: ${student.rollNo} has taken outing permission due to the Reason: ${gatePass.reason || "N/A"} Out Time: ${gatePass.outTime} Gate Pass ID: ${gatePass.requestId} Expected In Time: ${gatePass.expectedInTime || "N/A"} - From Sri Vasavi Engineering College`;
 
       await sendSMS(
         "COORDINATOR",          // sender (placeholder)
