@@ -69,11 +69,12 @@ const CoordinatorDashboard = () => {
 
   return (
     <div className="coordinator-dashboard">
-      <button onClick={logout} className="logout-btn">
-        Logout
-      </button>
-
-      <h2>Coordinator Dashboard</h2>
+      <div className="dashboard-header">
+        <h2>Coordinator Dashboard</h2>
+        <button onClick={logout} className="logout-btn">
+          Logout
+        </button>
+      </div>
 
       {/* ✅ ADD THIS SECTION */}
       <div className="coordinator-info">

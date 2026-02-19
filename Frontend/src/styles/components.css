@@ -112,3 +112,25 @@
   color: #2e7d32;
 }
 
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .gatepass-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .gatepass-header .student-info {
+    flex-wrap: wrap;
+  }
+
+  .gatepass-body p {
+    font-size: 13px;
+  }
+
+  .action-btn.small {
+    width: 100%;
+    text-align: center;
+  }
+}

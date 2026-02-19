@@ -61,11 +61,12 @@ const HodDashboard = () => {
 
   return (
     <div className="hod-dashboard">
-      <button onClick={logout} className="logout-btn">
-        Logout
-      </button>
-
-      <h2>HOD Dashboard</h2>
+      <div className="dashboard-header">
+        <h2>HOD Dashboard</h2>
+        <button onClick={logout} className="logout-btn">
+          Logout
+        </button>
+      </div>
 
       <div className="hod-info">
         <h3>Welcome, {user?.name}</h3>

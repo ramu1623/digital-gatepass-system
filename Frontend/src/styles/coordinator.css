@@ -97,3 +97,113 @@
   background-color: #c62828;
 }
 
+
+
+/* Header Layout */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.coordinator-dashboard h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.logout-btn {
+  padding: 6px 12px;
+  background-color: #d32f2f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.logout-btn:hover {
+  background-color: #b71c1c;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .coordinator-dashboard {
+    padding: 15px;
+  }
+  
+  .dashboard-header {
+    margin-bottom: 15px;
+  }
+
+  .coordinator-dashboard h2 {
+    font-size: 1.2rem;
+  }
+
+  /* Info Section: Allow wrapping but keep row if possible */
+  .coordinator-info {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px;
+  }
+  
+  .coordinator-info h3 {
+    font-size: 1.1rem;
+    width: 100%; /* Welcome on top */
+    margin-bottom: 5px;
+  }
+
+  .coordinator-info .user-details {
+    text-align: left;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding-top: 10px;
+    border-top: 1px solid #eee;
+  }
+  
+  .coordinator-info .user-details p {
+    margin: 0;
+  }
+
+  /* Dashboard Actions: Row layout for header + history button */
+  .dashboard-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .dashboard-actions h3 {
+    font-size: 1.2rem;
+    margin: 0;
+  }
+  
+  .dashboard-actions .action-btn {
+    width: auto; /* Don't force full width */
+    padding: 8px 12px;
+    font-size: 0.9rem;
+  }
+  
+  /* Cards */
+  .request-card {
+    padding: 15px;
+  }
+  
+  .action-group {
+    flex-direction: row; /* Keep buttons side-by-side */
+    gap: 10px;
+  }
+
+
+  /* Ensure header buttons (Logout/Back) don't get full width in header */
+  .dashboard-header .action-btn,
+  .dashboard-header .logout-btn {
+    width: auto;
+    margin: 0;
+  }
+}
+
+

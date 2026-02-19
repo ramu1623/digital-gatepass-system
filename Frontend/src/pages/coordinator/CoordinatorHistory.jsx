@@ -14,11 +14,12 @@ const CoordinatorHistory = () => {
 
   return (
     <div className="coordinator-dashboard">
-      <h2>Coordinator History</h2>
-
-      <Link to="/coordinator/dashboard" className="action-btn secondary" style={{ marginBottom: "20px" }}>
-        ← Back
-      </Link>
+      <div className="dashboard-header">
+        <h2>Coordinator History</h2>
+        <Link to="/coordinator/dashboard" className="action-btn secondary">
+          ← Back
+        </Link>
+      </div>
 
       {history.length === 0 && <p>No history found</p>}
 

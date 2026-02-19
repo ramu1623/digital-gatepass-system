@@ -22,15 +22,12 @@ const StudentHistory = () => {
 
   return (
     <div className="student-dashboard">
-      <h2>My Gate Passes</h2>
-
-      <Link
-        to="/student/dashboard"
-        className="action-btn secondary"
-        style={{ marginBottom: "10px" }}
-      >
-        ← Back
-      </Link>
+      <div className="dashboard-header">
+        <h2>My Gate Passes</h2>
+        <Link to="/student/dashboard" className="action-btn secondary">
+          ← Back
+        </Link>
+      </div>
 
       {loading && <p>Loading gate passes...</p>}
 

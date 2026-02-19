@@ -14,11 +14,12 @@ const HodHistory = () => {
 
   return (
     <div className="hod-dashboard">
-      <h2>HOD History</h2>
-
-      <Link to="/hod/dashboard" className="action-btn secondary" style={{ marginBottom: "20px" }}>
-        ← Back
-      </Link>
+      <div className="dashboard-header">
+        <h2>HOD History</h2>
+        <Link to="/hod/dashboard" className="action-btn secondary">
+          ← Back
+        </Link>
+      </div>
 
       {history.length === 0 && <p>No history found</p>}
 

@@ -156,3 +156,100 @@
   justify-content: center;
   font-size: 10px;
 }
+
+
+/* Layout fixes */
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.student-dashboard h2 {
+  margin: 0;
+}
+
+.logout-btn {
+  /* Override absolute positioning from line 77 if it exists, or just set static */
+  position: static;
+  padding: 6px 12px;
+  font-size: 14px;
+  width: auto;
+  margin: 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .student-dashboard {
+    padding: 15px;
+  }
+  
+  /* Header adjustments */
+  .dashboard-header {
+    margin-bottom: 15px;
+  }
+
+  .student-dashboard h2 {
+    font-size: 1.2rem;
+  }
+  
+  /* Details Card: Image + Info side-by-side if possible */
+  .student-details {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 15px;
+    padding: 15px; /* Reduce padding */
+    align-items: start;
+  }
+  
+  .student-photo {
+    grid-row: span 2;
+  }
+  
+  .profile-img, .no-photo {
+    width: 70px; /* Reduced size */
+    height: 70px;
+    border-width: 1px;
+  }
+  
+  .student-details p {
+    font-size: 0.9rem;
+    margin: 3px 0;
+  }
+  
+  /* Faculty section: Keep in row */
+  .student-faculty {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 15px;
+  }
+
+  .student-faculty p {
+    font-size: 0.9rem;
+  }
+  
+  /* Actions */
+  .student-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+
+  .student-actions .action-btn {
+    width: 100%;
+    text-align: center;
+    margin-right: 0;
+  }
+  
+  /* Ensure header buttons (Logout/Back) don't get full width in header */
+  .dashboard-header .action-btn,
+  .dashboard-header .logout-btn {
+    width: auto;
+    margin: 0;
+  }
+}
+
