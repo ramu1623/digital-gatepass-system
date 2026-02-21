@@ -173,7 +173,6 @@ const Register = () => {
                   type="file"
                   accept="image/*"
                   onChange={handlePhotoChange}
-                  required
                 />
               </>
             )}

@@ -1,10 +1,19 @@
 const multer = require("multer");
 const path = require("path");
+const fs = require("fs");
+
+// 🔥 Absolute upload path (important for Render)
+const uploadPath = path.join(__dirname, "../uploads/students");
+
+// 🔥 Create folder automatically if not exists
+if (!fs.existsSync(uploadPath)) {
+  fs.mkdirSync(uploadPath, { recursive: true });
+}
 
 // Storage configuration
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, "uploads/students");
+    cb(null, uploadPath);
   },
   filename: (req, file, cb) => {
     const uniqueName =
@@ -16,9 +25,11 @@ const storage = multer.diskStorage({
 // File filter (only images)
 const fileFilter = (req, file, cb) => {
   const allowedTypes = /jpeg|jpg|png|gif/;
+
   const extname = allowedTypes.test(
     path.extname(file.originalname).toLowerCase()
   );
+
   const mimetype = allowedTypes.test(file.mimetype);
 
   if (extname && mimetype) {
@@ -33,7 +44,7 @@ const uploadStudentPhoto = multer({
   storage,
   fileFilter,
   limits: {
-    fileSize: 5 * 1024 * 1024 // 2MB
+    fileSize: 5 * 1024 * 1024 // 5MB
   }
 });
 
