@@ -4,9 +4,9 @@ const router = express.Router();
 const {
     getGatePassById,
     updateInTime,
-} = require("../src/controllers/gatepassController");
+} = require("../controllers/gatepassController");
 
-const authMiddleware = require("../src/middleware/authMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
 
 // Get single gate pass details (any logged-in user)
 router.get("/:id", authMiddleware, getGatePassById);

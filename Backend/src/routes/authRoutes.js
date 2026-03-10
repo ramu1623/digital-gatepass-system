@@ -1,10 +1,10 @@
 const express = require("express");
 const router = express.Router();
 
-const { login, register } = require("../src/controllers/authController");
+const { login, register } = require("../controllers/authController");
 
 // import multer config
-const uploadStudentPhoto = require("../src/config/multer");
+const uploadStudentPhoto = require("../config/multer");
 
 // ✅ Register (student) + photo upload WITH ERROR HANDLING
 router.post(

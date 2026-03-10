@@ -5,10 +5,10 @@ const {
     getPendingRequests,
     takeAction,
     getHodHistory,
-} = require("../src/controllers/hodController");
+} = require("../controllers/hodController");
 
-const authMiddleware = require("../src/middleware/authMiddleware");
-const roleMiddleware = require("../src/middleware/roleMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
+const roleMiddleware = require("../middleware/roleMiddleware");
 
 router.get(
     "/requests",

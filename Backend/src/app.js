@@ -27,11 +27,11 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 // API ROUTES
 // --------------------
 
-app.use("/api/auth", require("./src/routes/authRoutes"));
-app.use("/api/student", require("./src/routes/studentRoutes"));
-app.use("/api/coordinator", require("./src/routes/coordinatorRoutes"));
-app.use("/api/hod", require("./src/routes/hodRoutes"));
-app.use("/api/gatepass", require("./src/routes/gatepassRoutes"));
+app.use("/api/auth", require("./routes/authRoutes"));
+app.use("/api/student", require("./routes/studentRoutes"));
+app.use("/api/coordinator", require("./routes/coordinatorRoutes"));
+app.use("/api/hod", require("./routes/hodRoutes"));
+app.use("/api/gatepass", require("./routes/gatepassRoutes"));
 
 // --------------------
 // SERVE FRONTEND (after build)

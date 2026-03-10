@@ -5,10 +5,10 @@ const {
     getPendingRequests,
     takeAction,
     getCoordinatorHistory,
-} = require("../src/controllers/coordinatorController");
+} = require("../controllers/coordinatorController");
 
-const authMiddleware = require("../src/middleware/authMiddleware");
-const roleMiddleware = require("../src/middleware/roleMiddleware");
+const authMiddleware = require("../middleware/authMiddleware");
+const roleMiddleware = require("../middleware/roleMiddleware");
 
 router.get(
     "/requests",
